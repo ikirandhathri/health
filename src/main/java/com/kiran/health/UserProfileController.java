@@ -5,24 +5,24 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/profile")
-public class ProfileController {
+public class UserProfileController {
 
-    private final ProfileRepository profileRepository;
+    private final UserProfileRepository userProfileRepository;
 
     // Connects our web endpoints directly to our cloud database repository
-    public ProfileController(ProfileRepository profileRepository) {
-        this.profileRepository = profileRepository;
+    public UserProfileController(UserProfileRepository userProfileRepository) {
+        this.userProfileRepository = userProfileRepository;
     }
 
     // HTTP POST: Save or update your profile metrics
     @PostMapping
-    public Profile saveProfile(@RequestBody Profile profile) {
-        return profileRepository.save(profile);
+    public UserProfile saveProfile(@RequestBody UserProfile userProfile) {
+        return userProfileRepository.save(userProfile);
     }
 
     // HTTP GET: View your saved goals
     @GetMapping
-    public List<Profile> getProfiles() {
-        return profileRepository.findAll();
+    public List<UserProfile> getProfiles() {
+        return userProfileRepository.findAll();
     }
 }

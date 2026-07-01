@@ -1,4 +1,7 @@
 package com.kiran.health.enums;
 
-public class Gender {
+public enum Gender {
+    Male,
+    Female,
+    Other
 }

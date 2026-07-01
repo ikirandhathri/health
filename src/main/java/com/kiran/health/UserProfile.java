@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "USER_PROFILE")
-public class Profile {
+public class UserProfile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,9 +20,9 @@ public class Profile {
     private int dailyCalorieGoal;
 
     // Default constructor required by JPA
-    public Profile() {}
+    public UserProfile() {}
 
-    public Profile(int age, double currentWeight, double targetWeight, int dailyCalorieGoal) {
+    public UserProfile(int age, double currentWeight, double targetWeight, int dailyCalorieGoal) {
         this.age = age;
         this.currentWeight = currentWeight;
         this.targetWeight = targetWeight;

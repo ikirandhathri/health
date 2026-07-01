@@ -1,4 +1,7 @@
 package com.kiran.health.enums;
 
-public class Goal {
+public enum Goal {
+    LoseWeight,
+    GainWeight,
+    BuildMuscle
 }

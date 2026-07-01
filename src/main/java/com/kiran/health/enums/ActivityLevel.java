@@ -1,4 +1,7 @@
 package com.kiran.health.enums;
 
-public class ActivityLevel {
+public enum ActivityLevel {
+    Low,
+    Medium,
+    High
 }
